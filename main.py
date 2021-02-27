@@ -38,10 +38,8 @@ while game_not_end:
         game_not_end = False
         myscore.game_over()
 
-    for i in mysnake.segments:
-        if i == mysnake.head:
-            pass
-        elif mysnake.head.distance(i) < 10:
+    for i in mysnake.segments[1:]:
+        if mysnake.head.distance(i) < 10:
             game_not_end = False
             myscore.game_over()
 
