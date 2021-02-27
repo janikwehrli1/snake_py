@@ -6,6 +6,7 @@ right = 0
 down = 270
 left = 180
 
+
 class Snake:
     def __init__(self):
         self.segments = []
@@ -17,7 +18,7 @@ class Snake:
             new_segment = Turtle()
             new_segment.penup()
             new_segment.shape("square")
-            new_segment.color("white")
+            new_segment.color("red")
             new_segment.goto(i)
             self.segments.append(new_segment)
 
@@ -39,6 +40,7 @@ class Snake:
     def right(self):
         if self.head.heading() != left:
             self.head.setheading(right)
+
     def left(self):
         if self.head.heading() != right:
             self.head.setheading(left)
