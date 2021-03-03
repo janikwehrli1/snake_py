@@ -35,12 +35,11 @@ while game_not_end:
         myscore.update_scoreboard()
 
     if mysnake.head.xcor() > 280 or mysnake.head.xcor() < -280 or mysnake.head.ycor() > 280 or mysnake.head.ycor() < -280:
-        game_not_end = False
-        myscore.game_over()
+        myscore.reset()
+        mysnake.reset()
 
     for i in mysnake.segments[1:]:
         if mysnake.head.distance(i) < 10:
-            game_not_end = False
-            myscore.game_over()
-
+            myscore.reset()
+            mysnake.reset()
 screen.exitonclick()
