@@ -1,9 +1,8 @@
-from turtle import Screen, Turtle
+from turtle import Screen
 import time
 from snake import Snake
 from snakefood import Food
 from scoreboard import Scoreboard
-import random
 
 screen = Screen()
 screen.setup(width=600, height=600)
@@ -33,6 +32,7 @@ while game_not_end:
         mysnake.extend()
         myscore.score_increase()
         myscore.update_scoreboard()
+
 
     if mysnake.head.xcor() > 280 or mysnake.head.xcor() < -280 or mysnake.head.ycor() > 280 or mysnake.head.ycor() < -280:
         myscore.reset()
